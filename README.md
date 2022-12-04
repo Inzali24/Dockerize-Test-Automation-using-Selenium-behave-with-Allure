@@ -2,7 +2,7 @@
 Automate Testing JavaScript Programming Problems
 ## Set up & Installation.
 ## Run the application with Docker
-## Clone/Fork the git repo and create a virtual environment 
+## Clone/Fork the git repo
 ### 1. Navigate to the project directory
 
 `cd Features`
