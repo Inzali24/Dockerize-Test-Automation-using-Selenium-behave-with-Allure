@@ -22,7 +22,7 @@ Automate Testing JavaScript Programming Problems
           
 **Windows** 
 
-```docker images``
+```docker images```
           
 **macOS/Linux**
 
