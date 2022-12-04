@@ -1,0 +1,41 @@
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 style="text-align: center;">Development Procedure</h2>
+        </div>
+        <div class="modal-body">
+            <img class="img-responsive" height="auto" src="../img/timer.jpg" width="auto">
+            <h4><b>Hint</b></h4>
+            <p>For layout interface, you can simply create your UI according to figure.<br>
+            For a timer project, you will need number input form to accept only numeric type minutes and second.</p>                
+            <h4><b>Requirement</b></h4>
+            <p>There should be three buttons such as start, stop and pause for the timer operation.<br>
+                <br>In order to test your html, you need to set text input id and button id according to figure.
+                <br>As it is case sensitive, you need to be careful of upper or lower case naming in button Id.</p>
+            <b>System will test your answer according to below scenario.</b>
+            <p>Scenario:Timer </p>
+            <br>Given Go to the Timer html file
+            <br>When: There is no input in the min and sec and then click the start button
+            <br>Then: 'Please set the time alert prompt' should be appeared
+            <br>Then: Special character and alphabet input are not allowed in min and sec
+            <br>When: I input 3 sec and click start button
+            <br>Then: Start Button becomes disabled
+            <br>Then: if time completed, 'Time's up' alert should be appeared and start button becomes enabled
+            <br>When: I input 10sec and then click start button
+            <br>When: I paused at after 2 sec and it should be shown as 8 sec
+            <br>Then: Stop Timer and it should be cleared or shown as 0
+            <br>Then: Start button becomes enabled
+            <br>When: I input -2 min and 1001 sec
+            <br>Then: 'Please set the time from 0 to 1000' alert prompt should be appeared
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1>Timer Project</h1>
+    <p>Write a JavaScript program for simple timer project. You should refer to detail specification about this project by clicking the show specification button.
+    You can also try to write and run codes in the 'Code' area and see how your codes work in the 'Output' area. If your code is Ok, you can check your result by pressing get result button.
+    <br><b>Please develop according to the requirement specification Scenario for testing.(Press Show Specification Button)</b></p>
+</div>

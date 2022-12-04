@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport"
+        content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+
+    <title>Offline JPLAS</title>
+    <link rel="stylesheet" href="CSS/Common.css">
+<!--    <link rel="stylesheet" href="../CSS/Common.css">-->
+    <link rel="stylesheet" href="CSS/skyblue.css">
+    <link rel="stylesheet" href="CSS/spinner.css">
+    <link rel="stylesheet" href="CSS/myCss.css">
+    <link rel="stylesheet" href="CSS/htmlstyle.css">
+    <style>
+        h2#statement:before {
+            content: "Problem #";
+        }
+
+        code.fillinblank input {
+            width: 40px;
+        }
+
+        code {
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+        } 
+    </style>
+</head>
+<body>
+    <div class="bg-dark padding-y-20">
+        <div class="container text-center">
+          <h1>Offline JPLAS</h1>
+    
+          <a class="btn btn-success" href="home.html">TOP</a>
+          <a class="btn btn-info" onclick="window.open('about:blank','_self').close()">END</a>
+          <!-- <div class="jplas" src="login/whoami.jsp"></div> -->
+        </div>
+    </div>
+
+    <div class="container mt-3">        
+            <div class="col-9 float-centre jplas">
+                <h2 id="list">Problems</h2>
+                <table class="table table-striped table-bordered table-hover">
+                    <tr>                    
+                        <th>Problem No</th>
+                        <th>ProblemName</th>
+                        <th>Remark</th>
+                    </tr>
+                    {% for key in result %}
+                    <tr onclick="window.location.href='/index/{{ key }}'" class="clickable text-center">
+                        <td width="20%">{{ result.index(key)+1 }}</td>
+                        <td width="50%">{{ key }}</td>
+                        <td></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
