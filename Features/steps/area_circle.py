@@ -33,7 +33,7 @@ def test_input_click(context):
     time.sleep(1)
 
 
-@then('result of area of a circle should be 201.0619 appeared on the area input')
+@then('result of area of a circle should be 201.0619 appeared on the area output with 4 decimal places')
 def test_answer(context):
     area = context.HelperFunc.find_by_id('inArea').get_attribute('value')
     if area == '201.0619':

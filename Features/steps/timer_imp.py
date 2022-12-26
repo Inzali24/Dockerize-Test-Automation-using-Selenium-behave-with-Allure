@@ -13,7 +13,7 @@ def step(context):
     context.HelperFunc.maximize()
 
 
-@when('There is no input in the min and sec and then click the start button')
+@when('Do not set minute and second and then click the start button')
 def test_no_input(context):
     context.HelperFunc.find_by_id('min').send_keys("")
     context.HelperFunc.find_by_id('sec').send_keys("")
@@ -26,9 +26,8 @@ def test_no_input_alert(context):
         context.HelperFunc.wait_until()
         alert = context.HelperFunc.switch_to()
         alert.accept()
-        pass
     except TimeoutException:
-        print("No input Error")
+        raise Exception("There is no input error alert!")
 
 
 @then('Special character and alphabet input are not allowed in min and sec')
@@ -58,20 +57,23 @@ def test_disable_button(context):
         raise Exception("Start Button should be disabled")
 
 
-@then('if time completed, Times up alert should be appeared and start button becomes enabled')
+@then('if time completed, Times up alert should be appeared')
 def test_finished_alert(context):
     try:
         time.sleep(3)
         context.HelperFunc.wait_until()
         alert = context.HelperFunc.switch_to()
-        alert.accept()
-        startTestEnable = context.HelperFunc.find_by_id('btnStart')
-        if startTestEnable.is_enabled():
-           pass
-        else:
-            raise Exception("Start Button should be enabled")
+        alert.accept()                
     except TimeoutException:
-        print('There is no finished timer alert')
+        raise Exception('There is no finished timer alert Message!')
+
+
+@then('Start button becomes enabled after time complete message')
+def test_enable_button1(context):    
+    startTestEnable = context.HelperFunc.find_by_id('btnStart')
+    time.sleep(1)    
+    if startTestEnable.get_property('disabled'): 
+        raise Exception("Start Button should be enabled") 
 
 
 @when('I input 10sec and then click start button')
@@ -103,12 +105,11 @@ def test_stop_button(context):
         raise Exception("Timer Counting Error.")
 
 
-@then('Start button becomes enabled')
-def test_enable_button(context):
+@then('Start button becomes enabled after stop timer')
+def test_enable_button(context):    
     startTestEnable = context.HelperFunc.find_by_id('btnStart')
-    if startTestEnable.is_enabled():
-        pass
-    else:
+    time.sleep(1)    
+    if startTestEnable.get_property('disabled'): 
         raise Exception("Start Button should be enabled")
 
 

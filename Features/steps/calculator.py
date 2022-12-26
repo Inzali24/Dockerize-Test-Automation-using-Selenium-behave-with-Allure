@@ -10,6 +10,10 @@ def step(context):
 @then('There should be no answer (input text id= txtResult)')
 def no_input_test(context):
     text = context.HelperFunc.find_by_id('txtResult').get_attribute('value')
+    if len(text) == 0:
+        pass
+    else:
+        raise Exception("Initial display should be empty")
 
 
 @when('I input "2" and "3" to calculator to add')
