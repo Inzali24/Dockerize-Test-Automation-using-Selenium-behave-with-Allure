@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Area of a Circle</title>
+
+<style>
+
+body{padding-top:30px;}
+
+label,input{display:block;}
+
+</style>
+
+</head>
+
+<body>
+
+<p>Input radius value and get the area of a circle.</p>
+
+<form action="" method="post" id="MyForm">
+
+<label for="radius">Radius</label><input type="text" name="radius" value="2" id="inRadius">
+
+<label for="area">Area</label><input type="text" name="area" id="inArea">
+
+<input type="submit" value="Calculate" id="btnCalculate1"></form>
+
+</body>
+
+<script>
+
+function area_sphere()
+
+ {
+
+  var area;
+
+  var radius = document.getElementById('inRadius').value;  
+
+  area = Math.PI * Math.sqrt(radius, 4);
+
+  area = area.toFixed();
+
+  document.getElementById('').value = area;
+
+  return false;
+
+ }
+
+window.onload = document.getElementById('MyForm').onsubmit = area_sphere;
+
+</script>
+
+</html>

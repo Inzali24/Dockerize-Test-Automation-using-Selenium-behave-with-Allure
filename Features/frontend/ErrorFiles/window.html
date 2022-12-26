@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Window Size : height and width</title>
+</head>
+<!-- Resize the window (here output panel) and see the result !-->
+<body>
+<div id="wh">
+<!-- Place height and width size here! -->  
+    <h3>// Size of HTML document (same as pageHeight/pageWidth in screenshot).</h3>
+    <p id="windowWidth"></p>
+    <p id="windowHeight"></p>    
+</div>
+</body>
+<script>
+function getSize()
+{  
+    // Size of HTML document (same as pageHeight/pageWidth in screenshot).
+    var wd = window.screen.width;  
+    var hd = window.screen.height;
+
+// put the result into a h1 tag
+
+ document.getElementById('windowWidth').innerHTML = wd;
+ document.getElementById('windowHeight').innerHTML = hd;
+}
+</script>
+</html>
