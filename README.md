@@ -26,7 +26,7 @@ Automate Testing JavaScript Programming Problems
           
 **macOS/Linux**
 
-```docker images```
+```$docker images```
 
 You will see your image like this .
 REPOSITORY      TAG       IMAGE ID       CREATED              SIZE
